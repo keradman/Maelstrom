@@ -30,7 +30,7 @@
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	[[UIApplication sharedApplication] setStatusBarOrientation:UIInterfaceOrientationLandscapeRight];
-	[[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
+	//[[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
 	[[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 	
 	gameState = kDMGameState_Paused;
