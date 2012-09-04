@@ -38,7 +38,7 @@ void SoundCompletionProc (SystemSoundID ssID, void *clientData)
 				_soundID = aSoundID;
 				AudioServicesAddSystemSoundCompletion(_soundID, NULL, NULL, SoundCompletionProc, (__bridge void *)(self));
 			} else {
-				NSLog(@"Error %d loading sound at path: %@", error, filePath);
+				NSLog(@"Error %ld loading sound at path: %@", error, filePath);
 				self = nil;
 			}
 		} else {
