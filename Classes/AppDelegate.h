@@ -1,6 +1,6 @@
 //
-//  DarkMatterAppDelegate.h
-//  DarkMatter
+//  AppDelegate.h
+//  Maelstrom
 //
 //  Created by Babak Keradman on 5/11/09.
 //  Copyright Zarboo Software 2009. All rights reserved.
@@ -12,7 +12,7 @@ typedef enum {
 	kDMGameState_Running	= 1
 } DMGameState;
 
-@interface DarkMatterAppDelegate : NSObject <UIApplicationDelegate> {
+@interface AppDelegate : NSObject <UIApplicationDelegate> {
 
     NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    

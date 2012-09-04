@@ -1,22 +1,22 @@
 //
-//  DarkMatterAppDelegate.m
-//  DarkMatter
+//  AppDelegate.m
+//  Maelstrom
 //
 //  Created by Babak Keradman on 5/11/09.
 //  Copyright Zarboo Software 2009. All rights reserved.
 //
 
-#import "DarkMatterAppDelegate.h"
+#import "AppDelegate.h"
 
 #define kFPS 60.0
 
-@interface DarkMatterAppDelegate(Internal)
+@interface AppDelegate(Internal)
 
 - (void)gameLoop;
 
 @end
 
-@implementation DarkMatterAppDelegate
+@implementation AppDelegate
 
 @synthesize window;
 @synthesize gameViewController;

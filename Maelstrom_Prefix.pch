@@ -14,6 +14,6 @@
     #import <CoreData/CoreData.h>
 #endif
 
-#import "DarkMatterAppDelegate.h"
+#import "AppDelegate.h"
 
-#define APPLICATION (DarkMatterAppDelegate *)[[UIApplication sharedApplication] delegate]
+#define APPLICATION (AppDelegate *)[[UIApplication sharedApplication] delegate]
