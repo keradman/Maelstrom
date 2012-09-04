@@ -51,8 +51,6 @@
 
 - (void)dealloc {
 	[animationTimer invalidate];
-	[animationTimer release];
-    [super dealloc];
 }
 
 @end

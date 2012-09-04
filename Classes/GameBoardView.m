@@ -60,7 +60,6 @@ const CGFloat kGridBlockSize = 32.0;// 26.0;
 			GameBoardZone *zone = [[GameBoardZone alloc] init];
 			[zone setRect:CGRectMake(x, y, kGridBlockSize, kGridBlockSize)];
 			[zones addObject:zone];
-			[zone release];
 			x = x + kGridBlockSize;
 		}
 		y = y + kGridBlockSize;
@@ -70,25 +69,21 @@ const CGFloat kGridBlockSize = 32.0;// 26.0;
 	[topBorderZone setIsActive:NO];
 	[topBorderZone setRect:CGRectMake(0, 0, self.frame.size.width, kGridVerticalOffset)];
 	[zones addObject:topBorderZone];
-	[topBorderZone release];
 	//bottom border
 	GameBoardZone *bottomBorderZone = [[GameBoardZone alloc] init];
 	[bottomBorderZone setIsActive:NO];
 	[bottomBorderZone setRect:CGRectMake(0, self.frame.size.height - kGridVerticalOffset, self.frame.size.width, kGridVerticalOffset)];
 	[zones addObject:bottomBorderZone];
-	[bottomBorderZone release];
 	//left border
 	GameBoardZone *leftBorderZone = [[GameBoardZone alloc] init];
 	[leftBorderZone setIsActive:NO];
 	[leftBorderZone setRect:CGRectMake(0, kGridVerticalOffset, kGridHorizontalOffset, self.frame.size.height - (2 * kGridVerticalOffset))];
 	[zones addObject:leftBorderZone];
-	[leftBorderZone release];
 	//right border
 	GameBoardZone *rightBorderZone = [[GameBoardZone alloc] init];
 	[rightBorderZone setIsActive:NO];
 	[rightBorderZone setRect:CGRectMake(self.frame.size.width - kGridHorizontalOffset, kGridVerticalOffset, kGridHorizontalOffset, self.frame.size.height - (2 * kGridVerticalOffset))];
 	[zones addObject:rightBorderZone];
-	[rightBorderZone release];
 }
 
 - (void)buildGridLinesPath {
@@ -194,12 +189,7 @@ const CGFloat kGridBlockSize = 32.0;// 26.0;
 }
 
 - (void)dealloc {
-	[boomSound release];
-	[fogOfWar release];
-	[zones release];
 	CGPathRelease(gridLinesPath);
-	[backgroundImage release];
-    [super dealloc];
 }
 
 @end

@@ -18,7 +18,7 @@
 	id delegate;
 }
 
-@property (nonatomic, retain) id delegate;
+@property (nonatomic) id delegate;
 
 - (void)startExplosion;
 

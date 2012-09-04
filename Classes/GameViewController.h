@@ -13,6 +13,6 @@
 	GameBoardView *gameBoard;
 }
 
-@property (nonatomic, retain) IBOutlet GameBoardView *gameBoard;
+@property (nonatomic) IBOutlet GameBoardView *gameBoard;
 
 @end

@@ -55,10 +55,6 @@
 }
 
 
-- (void)dealloc {
-	[gameBoard release];
-    [super dealloc];
-}
 
 
 @end

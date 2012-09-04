@@ -16,8 +16,8 @@
     SystemSoundID _soundID;
 }
 
-@property (nonatomic, retain) NSString *filePath;
-@property (nonatomic, retain) id delegate;
+@property (nonatomic) NSString *filePath;
+@property (nonatomic) id delegate;
 
 - (id)initWithContentsOfFile:(NSString *)path;
 - (void)play;

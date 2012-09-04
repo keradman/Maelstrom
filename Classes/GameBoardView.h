@@ -23,7 +23,7 @@
 	GameBoardZone *explodingZone;
 }
 
-@property (nonatomic, retain) UIImage *backgroundImage;
+@property (nonatomic) UIImage *backgroundImage;
 @property (readwrite) BOOL showGrid;
 
 - (GameBoardZone *)getZoneAtLocation:(CGPoint)location;

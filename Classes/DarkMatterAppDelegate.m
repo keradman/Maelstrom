@@ -120,7 +120,7 @@
     if (managedObjectModel != nil) {
         return managedObjectModel;
     }
-    managedObjectModel = [[NSManagedObjectModel mergedModelFromBundles:nil] retain];    
+    managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];    
     return managedObjectModel;
 }
 
@@ -166,16 +166,9 @@
 
 - (void)dealloc {
 	
-    [managedObjectContext release];
-    [managedObjectModel release];
-    [persistentStoreCoordinator release];
     
 	[gameLoopTimer invalidate];
-	[gameLoopTimer release];
 	
-	[gameViewController release];
-	[window release];
-	[super dealloc];
 }
 
 

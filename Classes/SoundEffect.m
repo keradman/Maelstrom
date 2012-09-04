@@ -10,7 +10,7 @@
 
 void SoundCompletionProc (SystemSoundID ssID, void *clientData)
 {
-	SoundEffect *sound = (SoundEffect *)clientData;
+	SoundEffect *sound = (__bridge SoundEffect *)clientData;
 	if(sound.delegate != nil) {
 		if([sound.delegate respondsToSelector:@selector(soundEffectDidFinishPlaying:)]){
 			[sound.delegate performSelector:@selector(soundEffectDidFinishPlaying:) withObject:sound];
@@ -32,18 +32,18 @@ void SoundCompletionProc (SystemSoundID ssID, void *clientData)
 		NSURL *aFileURL = [NSURL fileURLWithPath:filePath isDirectory:NO];
 		if (aFileURL != nil)  {
 			SystemSoundID aSoundID;
-			OSStatus error = AudioServicesCreateSystemSoundID((CFURLRef)aFileURL, &aSoundID);
+			OSStatus error = AudioServicesCreateSystemSoundID((__bridge CFURLRef)aFileURL, &aSoundID);
 			
 			if (error == kAudioServicesNoError) { // success
 				_soundID = aSoundID;
-				AudioServicesAddSystemSoundCompletion(_soundID, NULL, NULL, SoundCompletionProc, self);
+				AudioServicesAddSystemSoundCompletion(_soundID, NULL, NULL, SoundCompletionProc, (__bridge void *)(self));
 			} else {
 				NSLog(@"Error %d loading sound at path: %@", error, filePath);
-				[self release], self = nil;
+				self = nil;
 			}
 		} else {
 			NSLog(@"NSURL is nil for path: %@", filePath);
-			[self release], self = nil;
+			self = nil;
 		}
     }
     return self;
@@ -62,14 +62,9 @@ void SoundCompletionProc (SystemSoundID ssID, void *clientData)
 }
 
 -(void)dealloc {
-	[filePath release];
-	filePath = nil;
-	[delegate release];
-	delegate = nil;
 	if(_soundID != 0) {
 		AudioServicesDisposeSystemSoundID(_soundID);
 	}
-    [super dealloc];
 }
 
 @end
