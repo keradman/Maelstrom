@@ -3,7 +3,7 @@
 //  SpeakEasy
 //
 //  Created by Babak Keradman on 5/1/08.
-//  Copyright 2008 Zarboo Software. All rights reserved.
+//  Copyright 2012 Maestro Studios. All rights reserved.
 //
 
 #import "SoundEffect.h"

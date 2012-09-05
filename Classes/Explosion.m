@@ -3,7 +3,7 @@
 //  DarkMatter
 //
 //  Created by Babak Keradman on 5/12/09.
-//  Copyright 2009 Zarboo Software. All rights reserved.
+//  Copyright 2012 Maestro Studios. All rights reserved.
 //
 
 #import "Explosion.h"

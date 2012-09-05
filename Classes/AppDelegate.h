@@ -3,7 +3,7 @@
 //  Maelstrom
 //
 //  Created by Babak Keradman on 5/11/09.
-//  Copyright Zarboo Software 2009. All rights reserved.
+//  Copyright 2012 Maestro Studios. All rights reserved.
 //
 #import "GameViewController.h"
 
