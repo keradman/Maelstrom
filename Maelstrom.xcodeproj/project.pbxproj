@@ -17,6 +17,8 @@
 		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
 		B831B03615F6570D007BACDE /* iphone-appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = B831B03515F6570D007BACDE /* iphone-appicon.png */; };
 		B831B03815F65710007BACDE /* iphone-appicon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B831B03715F65710007BACDE /* iphone-appicon@2x.png */; };
+		B831B03F15F66961007BACDE /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B831B03E15F66961007BACDE /* Default.png */; };
+		B831B04215F66966007BACDE /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B831B04115F66966007BACDE /* Default@2x.png */; };
 		D8420A520FBAF1A200C18352 /* boom.wav in Resources */ = {isa = PBXBuildFile; fileRef = D8420A510FBAF1A200C18352 /* boom.wav */; };
 		D85BB82D0FBA24C90056BAF9 /* sphere.png in Resources */ = {isa = PBXBuildFile; fileRef = D85BB82C0FBA24C90056BAF9 /* sphere.png */; };
 		D85BB85B0FBA2EE80056BAF9 /* explosion.png in Resources */ = {isa = PBXBuildFile; fileRef = D85BB85A0FBA2EE80056BAF9 /* explosion.png */; };
@@ -46,6 +48,8 @@
 		8D1107310486CEB800E47090 /* Maelstrom-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Maelstrom-Info.plist"; sourceTree = "<group>"; };
 		B831B03515F6570D007BACDE /* iphone-appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-appicon.png"; sourceTree = "<group>"; };
 		B831B03715F65710007BACDE /* iphone-appicon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iphone-appicon@2x.png"; sourceTree = "<group>"; };
+		B831B03E15F66961007BACDE /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B831B04115F66966007BACDE /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		D8420A510FBAF1A200C18352 /* boom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boom.wav; sourceTree = "<group>"; };
 		D85BB82C0FBA24C90056BAF9 /* sphere.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sphere.png; sourceTree = "<group>"; };
 		D85BB85A0FBA2EE80056BAF9 /* explosion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = explosion.png; sourceTree = "<group>"; };
@@ -157,6 +161,8 @@
 		D85C20F80FB88FE000ED17D0 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				B831B04115F66966007BACDE /* Default@2x.png */,
+				B831B03E15F66961007BACDE /* Default.png */,
 				B831B03715F65710007BACDE /* iphone-appicon@2x.png */,
 				B831B03515F6570D007BACDE /* iphone-appicon.png */,
 				D85BB85A0FBA2EE80056BAF9 /* explosion.png */,
@@ -233,6 +239,8 @@
 				D8420A520FBAF1A200C18352 /* boom.wav in Resources */,
 				B831B03615F6570D007BACDE /* iphone-appicon.png in Resources */,
 				B831B03815F65710007BACDE /* iphone-appicon@2x.png in Resources */,
+				B831B03F15F66961007BACDE /* Default.png in Resources */,
+				B831B04215F66966007BACDE /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
