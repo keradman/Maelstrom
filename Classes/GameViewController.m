@@ -33,7 +33,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	[gameBoard setBackgroundImage:[UIImage imageNamed:@"sphere.png"]];
+	[gameBoard setBackgroundImage:[UIImage imageNamed:@"nebula.png"]];
 }
 
 // Override to allow orientations other than the default portrait orientation.
