@@ -18,6 +18,7 @@
 	NSMutableArray *zones;
 	CGMutablePathRef gridLinesPath;
 	NSMutableArray *fogOfWar;
+    NSMutableArray *highlightedZones;
 	Explosion *explosion;
 	SoundEffect *boomSound;
 	GameBoardZone *explodingZone;
@@ -27,5 +28,6 @@
 @property (readwrite) BOOL showGrid;
 
 - (GameBoardZone *)getZoneAtLocation:(CGPoint)location;
+- (void)highlightZones:(NSArray *)points;
 
 @end

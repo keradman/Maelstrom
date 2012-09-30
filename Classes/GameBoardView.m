@@ -7,13 +7,14 @@
 //
 
 #import "GameBoardView.h"
+#import "Constants.h"
 
 const CGFloat kGridHorizontalOffset = 0.0;// 6.0;
 const CGFloat kGridVerticalOffset = 0.0;// 4.0;
-const CGFloat kGridBlockSize = 32.0;// 26.0;
 
 #define FOG_OF_WAR_COLOR {0.1, 0.1, 0.1, 0.6}
 #define GRID_COLOR {0.8, 0.8, 0.8, 0.5}
+#define HIGHLIGHTED_COLOR {1.0, 0.98, 0.8, 0.5}
 
 @interface GameBoardView(PrivateMethods)
 
@@ -44,6 +45,7 @@ const CGFloat kGridBlockSize = 32.0;// 26.0;
 	[self buildGameBoardZones];
 	[self buildGridLinesPath];
 	fogOfWar = [[NSMutableArray alloc] initWithArray:zones];
+    highlightedZones = [[NSMutableArray alloc] initWithCapacity:10];
 	boomSound = [[SoundEffect alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"boom" ofType:@"wav"]];
 	[boomSound setDelegate:self];
 	explosion = [[Explosion alloc] initWithFrame:CGRectMake(0, 0, 64, 64)];
@@ -162,6 +164,19 @@ const CGFloat kGridBlockSize = 32.0;// 26.0;
 	}
 }
 
+- (void)highlightZones:(NSArray *)points
+{
+    [highlightedZones removeAllObjects];
+    
+    for (NSValue *val in points) {
+        CGPoint p = [val CGPointValue];
+        GameBoardZone *zone = [self getZoneAtLocation:p];
+        [highlightedZones addObject:zone];
+    }
+    
+    [self setNeedsDisplay];
+}
+
 - (void)drawRect:(CGRect)rect {
 	//background image
 	[backgroundImage drawInRect:self.frame];
@@ -179,6 +194,17 @@ const CGFloat kGridBlockSize = 32.0;// 26.0;
 	CGContextSetFillColor(context, fogOfWarColorComponents);
 	CGContextFillRect(context, self.frame);
 	CGContextRestoreGState(context);
+    
+    CGContextSaveGState(context);	
+    CGFloat highlightedColorComponents[4] = HIGHLIGHTED_COLOR;
+    CGContextSetFillColor(context, highlightedColorComponents);
+	for (int i = 0; i < [highlightedZones count]; i++) {
+		GameBoardZone *zone = [highlightedZones objectAtIndex:i];
+		CGContextFillRect(context, zone.rect);
+	}
+
+	CGContextRestoreGState(context);
+    
 	//grid lines
 	if(showGrid) {
 		CGFloat gridColorComponents[4] = GRID_COLOR;
